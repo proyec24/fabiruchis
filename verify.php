@@ -1,4 +1,5 @@
 <?php
+
 include "bd.php";
 $nomina = filter_input(INPUT_POST, "nomina");
 $query = "SELECT * FROM profesor WHERE id_profesor ='$nomina'";

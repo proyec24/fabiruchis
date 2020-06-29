@@ -1,12 +1,12 @@
 <?php
 include "bd.php";
-
-if (isset($_GET['ID_Profesor']) && isset($_GET['Contrasena'])) {
-    $ID_Profesor = $_GET['ID_Profesor'];
-    $Contrasena = $_GET['Contrasena'];
-
-    $bd = new BaseDeDatos();
-    $res = $bd->Ingreso($ID_Profesor, $Contrasena);
-
-    echo '{"ID_Profesor":'.$Contrasena.'}';
+$user = filter_input(INPUT_POST, "usuario");
+$password = filter_input(INPUT_POST, "contra");
+$query = "SELECT * FROM profesor WHERE id_profesor ='$user' AND contrasena='$password'";
+$result = mysqli_query($con, $query);
+$row = mysqli_fetch_array($result);
+if($row){
+  echo '1';
 }
+mysqli_close($con);
+?>

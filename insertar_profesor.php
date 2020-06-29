@@ -1,5 +1,6 @@
 <?php
 include "bd.php";
+echo '1';
 $nomina = filter_input(INPUT_POST, "nomina");
 $nombre = filter_input(INPUT_POST, "nombre");
 $apellidos = filter_input(INPUT_POST, "apellidos");

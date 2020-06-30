@@ -2,7 +2,7 @@
 
 include "bd.php";
 $nomina = filter_input(INPUT_POST, "nomina");
-$query = "SELECT * FROM profesor WHERE id_profesor ='$nomina'";
+$query = "SELECT * FROM profesor WHERE id_prof ='$nomina'";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_array($result);
 if($row){

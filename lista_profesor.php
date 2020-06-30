@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 $resultadoArray = array();
 $aux=1;
 if($aux == 1){
-  $Query = "SELECT * FROM profesor WHERE id_profesor >= '$aux'";
+  $Query = "SELECT * FROM profesor WHERE id_prof >= '$aux'";
   $Resultado = mysqli_query($con, $Query);
   foreach($Resultado as $row){
     $resultadoArray[] = $row;
